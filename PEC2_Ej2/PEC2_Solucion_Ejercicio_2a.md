@@ -1,0 +1,2 @@
+ ¿Por qué es el valor de this es undefined?
+ Porque, en las funciones flecha (arrow functions), el valor de this se toma del contexto léxico más cercano y las funciones flecha no tienen su propio objeto this. Entonces, el valor this es léxico y no se puede cambiar, y no podemos utilizar métodos para cambiarlo en este tipo de funciones. Al no haber dado un valor a this en la función, sale undefined.
