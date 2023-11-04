@@ -1,9 +1,21 @@
+const data = require('./data');
+
 function entryCalculator(entrants) {
-  // your code here
+  if (arguments.length === 0) {
+    return 0;
+  }
+  if (Object.keys(entrants).length === 0) {
+    return 0;
+  }
+  let totalCost = 0;
+  for (let category in entrants) {
+    totalCost += data["prices"][category] * entrants[category];
+  }
+  return totalCost;
 }
 
 function schedule(dayName) {
-  // your code here
+
 }
 
 function animalCount(species) {
